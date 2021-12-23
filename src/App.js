@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import NavComponent from "./components/NavComponent/NavComponent";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import { Users } from "./components/Users/Users";
+import { AddUser } from "./components/AddUsers/AddUser";
+import { Tweets } from "./components/Tweets/Tweets";
+import { AddTweets } from "./components/AddTweets/AddTweets";
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+      <NavComponent />
+      <div className="routes-container">
+        <Routes>
+          <Route path='/users' element={<Users/>} />
+          <Route exact path='/addUser' element={<AddUser />} />
+          <Route exact path='/tweets' element={<Tweets />} />
+          <Route exact path='/addTweet' element={<AddTweets />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

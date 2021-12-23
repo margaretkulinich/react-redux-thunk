@@ -1,0 +1,34 @@
+.add-user {
+    padding-top: 20%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input {
+    height: 20px;
+    background-color: #262626;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #535353;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 10px;
+}
+  
+.add-button {
+    width: 150px;
+    height: 45px;
+    border-radius: 15px;
+    margin: 15px auto;
+    background-color: #4AD5FF;
+    color: #ffffff;
+    font-weight: bolder;
+    transition-duration: 0.6s;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition-duration: 0.6s;
+}
