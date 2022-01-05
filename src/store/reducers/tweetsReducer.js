@@ -1,4 +1,4 @@
-import { ADD_POST, GET_ALL_TWEETS } from "../actions/actionTweet";
+import { ADD_POST, GET_ALL_TWEETS } from "../actions/tweetsAction";
 
 const defaultState = [];
 

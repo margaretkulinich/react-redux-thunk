@@ -1,17 +1,14 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllUsers } from "../../store/actions/actionUser";
+import {getAllUsers } from "../../store/actions/usersAction";
 import { User } from "./User";
 
 
 export const Users = () => {
   const dispatch = useDispatch();
 
-  const handleAPICall = async () => {
-    const res = await fetch("http://domer.tech:9999/users/");
-    const data = await res.json();
-
-    dispatch(getAllUsers(data.data));
+  const handleAPICall = () => {
+    dispatch(getAllUsers(dispatch));
   };
 
   useEffect(() => {

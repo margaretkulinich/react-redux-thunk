@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getAllUsers } from "../../store/actions/actionUser";
+import { getAllUsers } from "../../store/actions/usersAction";
 import "./styles.css";
 
 export const AddTweets = () => {
